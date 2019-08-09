@@ -1,27 +1,28 @@
 var url = "https://pokeapi.co/api/v2/pokemon/?limit=151&offset=0";
 
-function renderCharacters(pokemons){
-    for (var i=0 ; i < pokemons; i++){
-        pokemon = responseData.results[i].name;
+function renderPokemons(pokemons) {
+    for (var i=0 ; i < pokemons.length ; i++){
+        var pokemonName = pokemons[i].name;
+        var content = document.getElementById("content");
         var pokemonIndex = i+1;
-        var pokemonimg = "https://img.pokemondb.net/artwork/"+responseData.results[i].name+".jpg";
+        var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemons[i].name+".jpg";
         var pokemonHTML=`
         <div>
             <h3>${pokemonIndex}</h3>
             <img src = ${pokemonimg}>
-            <h2>${pokemon}</h2>
+            <h2>${pokemonName}</h2>
         </div>
         `
-        var content = document.getElementById("content")
         content.insertAdjacentHTML("beforeend", pokemonHTML);
-        };
+    };
 };
 function fetchPokemons() {
-    sendGetRequest(url, function(responseData){
-        var pokemons= responseData.results;
-        renderCharacters(pokemons);
-    })
-}
+    sendGetRequest(url, function(pokemons){
+        var pokemons= pokemons.results;
+        console.log(pokemons)
+        renderPokemons(pokemons);
+    });
+};
 
 // function setUpEvents() {
 //     var btnSearch = document.getElementById("btn_search");
@@ -31,7 +32,7 @@ function fetchPokemons() {
 //     var fullURL=`https://pokeapi.co/api/v2/pokemon/${searchString}/`;
 //     ;
 //     sendGetRequest(fullURL, function(responseData){
-//         var pokemons = responseData.results;
+//         var pokemons = pokemons;
 //         renderCharacters(pokemons)
 //     })
 // });      
