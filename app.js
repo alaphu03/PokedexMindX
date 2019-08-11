@@ -5,7 +5,9 @@ function renderPokemons(pokemons) {
         var pokemonName = pokemons[i].name;
         var content = document.getElementById("content");
         var pokemonIndex = i+1;
-        var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemons[i].name+".jpg";
+        // var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemons[i].name+".jpg";
+        // var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonIndex+".png?raw=true"
+        var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
         var pokemonHTML=`
         <div>
             <h3>${pokemonIndex}</h3>
@@ -32,18 +34,22 @@ function setUpEvents() {
     var url=`https://pokeapi.co/api/v2/pokemon/${searchString}`;
     ;
     sendGetRequest(url, function(pokemonsSearch){
-        var pokemonsSearch= pokemonsSearch.forms[0];
+        var pokemonsSearch= pokemonsSearch;
         renderPokemon(pokemonsSearch);
     })
 });      
 }
 function renderPokemon(pokemonsSearch) {
-    var pokemonName = pokemonsSearch.name;
+    var pokemonName = pokemonsSearch.forms[0].name;
+    var pokemonID = pokemonsSearch.id
     var content = document.getElementById("content");
     content.textContent = ""
-    var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemonsSearch.name+".jpg";
+    // var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemonsSearch.name+".jpg";
+    // var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonID+".png?raw=true"
+    var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
     var pokemonHTML=`
     <div>
+        <h3>${pokemonID}</h3>
         <img src = ${pokemonimg}>
         <h2>${pokemonName}</h2>
     </div>
