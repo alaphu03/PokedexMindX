@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pokedex Test 1</title>
+  <script  src="./script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body onload="waiting()" style="margin:0;">
+<section class="wrapper" id="loader" >
+  <div class="spinner" >
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+    <i></i>
+  </div>
+</section>
+<!-- End loading animations -->
+<div style="display:none;" id="myDiv" class="animate-bottom">
+  <h2>Tada!</h2>
+  Using The id Attribute
+
+The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).
+
+The id value can be used by CSS and JavaScript to perform certain tasks for the element with the specific id value.
+
+In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:
+Example
+
+Use CSS to style an element with the id "myHeader":
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+</style>
+
+<h1 id="myHeader">My Header</h1>
+</div>
+
+</body>
+</html>
