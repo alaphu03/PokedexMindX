@@ -28,7 +28,7 @@ function setUpEvents() {
     var btnSearch = document.getElementById("btn_search");
     btnSearch.addEventListener("click", function(e){
     var searchBar = document.getElementById("search_bar");
-    var searchString = searchBar.value;
+    var searchString = searchBar.value.toLowerCase();
     var url=`https://pokeapi.co/api/v2/pokemon/${searchString}`;
     ;
     sendGetRequest(url, function(pokemonsSearch){
