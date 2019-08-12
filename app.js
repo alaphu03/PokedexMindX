@@ -1,4 +1,4 @@
-var url = "https://pokeapi.co/api/v2/pokemon/?limit=151&offset=0";
+var url = "https://pokeapi.co/api/v2/pokemon/?limit=20&offset=0";
 
 function renderPokemons(pokemons) {
     for (var i=0 ; i < pokemons.length ; i++){
@@ -6,13 +6,15 @@ function renderPokemons(pokemons) {
         var content = document.getElementById("content");
         var pokemonIndex = i+1;
         // var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemons[i].name+".jpg";
-        // var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonIndex+".png?raw=true"
-        var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
+        var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonIndex+".png?raw=true"
+        // var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
         var pokemonHTML=`
-        <div>
-            <h3>${pokemonIndex}</h3>
-            <img src = ${pokemonimg}>
-            <h2>${pokemonName}</h2>
+        <div id="pokemonCard">
+            <img id = PokemonIMG src = ${pokemonimg}>
+            <div class= "container">
+                <h3>${pokemonIndex}</h3>
+                <h2>${pokemonName}</h2>
+            </div>
         </div>
         `
         content.insertAdjacentHTML("beforeend", pokemonHTML);
@@ -21,7 +23,6 @@ function renderPokemons(pokemons) {
 function fetchPokemons() {
     sendGetRequest(url, function(pokemons){
         var pokemons= pokemons.results;
-        console.log(pokemons)
         renderPokemons(pokemons);
     });
 };
@@ -45,13 +46,13 @@ function renderPokemon(pokemonsSearch) {
     var content = document.getElementById("content");
     content.textContent = ""
     // var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemonsSearch.name+".jpg";
-    // var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonID+".png?raw=true"
-    var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
+    var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonID+".png?raw=true"
+    // var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
     var pokemonHTML=`
     <div>
-        <h3>${pokemonID}</h3>
-        <img src = ${pokemonimg}>
-        <h2>${pokemonName}</h2>
+        <h3 id = "pokemonID">${pokemonID}</h3>
+        <img id = PokemonIMG src = ${pokemonimg}>
+        <h2 id="pokemonName">${pokemonName}</h2>
     </div>
     `
     content.insertAdjacentHTML("beforeend", pokemonHTML);
