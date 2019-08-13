@@ -9,15 +9,17 @@ function renderPokemons(pokemons) {
         var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonIndex+".png?raw=true"
         // var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
         var pokemonHTML=`
-        <div id="pokemonCard">
-            <img id = PokemonIMG src = ${pokemonimg}>
-            <div class= "container">
-                <span>
-                    <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
-                    <h2>${pokemonName}</h2>
-                </span>
+        <a id = "idcontent" href=window.open("", Pokemon)>
+            <div id="pokemonCard">
+                <img id = PokemonIMG src = ${pokemonimg}>
+                <div class= "container">
+                    <span>
+                        <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
+                        <h2>${pokemonName}</h2>
+                    </span>
+                </div>
             </div>
-        </div>
+        <a>
         `
         content.insertAdjacentHTML("beforeend", pokemonHTML);
     };

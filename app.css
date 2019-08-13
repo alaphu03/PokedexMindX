@@ -6,11 +6,21 @@
   border: 1px white;
   height: 200px;
   width: 200px;
-  margin: 25px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
-
 #pokemonIndex{
   color: black;
+  margin-top: 10px;
+}
+#pokemonName {
+  justify-content: center;
+  align-items: center;
+}
+#heading{
+  background
+  text-align: center;
+  color: white
 }
 body {
 	margin: 0;
@@ -49,6 +59,11 @@ a:hover {
 #root{
   margin-right: 50px;
   margin-left: 50px;
+}
+#idcontent{
+  height: 200px;
+  width: 200px;
+  margin: 15px;
 }
 
 /* h1 {
