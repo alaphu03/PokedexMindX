@@ -10,7 +10,7 @@ function renderPokemons(pokemons) {
         // var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
         var pokemonHTML=`
         <div id="pokemonCard">
-            <img id = PokemonIMG src = ${pokemonimg}>
+            <img id = pokemonIMG src = ${pokemonimg}>
             <div class= "container">
                 <span>
                     <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
@@ -65,7 +65,7 @@ function renderPokemon(pokemonsSearch) {
     ;
 };
 function setUpEvents2() {
-    var search = document.getElementById("pokemonCard");
+    var search = document.getElementsByClassName("container")
     search.addEventListener("click", function(e){
     // var searchBar = document.getElementById("search_bar");
     // var searchString = searchBar.value;

@@ -4,10 +4,14 @@
 }
 #pokemonCard{
   border: 1px white;
-  height: 200px;
+  height: 300px;
   width: 200px;
   border-radius: 10px;
   border: 1px solid black;
+}
+.container{
+  height: 100px;
+  width: 200px;
 }
 #pokemonIndex{
   color: black;
@@ -20,6 +24,9 @@
 #heading{
   text-align: center;
   color: white;
+}
+#search_container{
+  text-align: center;
 }
 body {
 	margin: 0;
@@ -63,31 +70,21 @@ a:hover {
 #pokemonCard{
   height: 200px;
   width: 200px;
-  margin: 15px;
+  margin:20px;
 }
 #cardIMG {
+  height: 100px;
+  width: 100px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 #pokemonIMG{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* h1 {
-	font-weight: 300;
-}
-
-h3 {
-	color: #eee;
-	font-weight: 100;
-}
-
-h5 {
-	color:#eee;
-	font-weight:300;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
