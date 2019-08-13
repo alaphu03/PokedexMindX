@@ -18,9 +18,8 @@
   align-items: center;
 }
 #heading{
-  background
   text-align: center;
-  color: white
+  color: white;
 }
 body {
 	margin: 0;
@@ -60,10 +59,21 @@ a:hover {
   margin-right: 50px;
   margin-left: 50px;
 }
-#idcontent{
+
+#pokemonCard{
   height: 200px;
   width: 200px;
   margin: 15px;
+}
+#cardIMG {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#pokemonIMG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* h1 {

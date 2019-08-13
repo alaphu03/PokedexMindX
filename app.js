@@ -9,17 +9,15 @@ function renderPokemons(pokemons) {
         var pokemonimg = "https://github.com/PokeAPI/sprites/blob/master/sprites/pokemon/"+pokemonIndex+".png?raw=true"
         // var pokemonimg = "https://img.pokemondb.net/sprites/sun-moon/icon/"+pokemonName+".png"
         var pokemonHTML=`
-        <a id = "idcontent" href=window.open("", Pokemon)>
-            <div id="pokemonCard">
-                <img id = PokemonIMG src = ${pokemonimg}>
-                <div class= "container">
-                    <span>
-                        <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
-                        <h2>${pokemonName}</h2>
-                    </span>
-                </div>
+        <div id="pokemonCard">
+            <img id = PokemonIMG src = ${pokemonimg}>
+            <div class= "container">
+                <span>
+                    <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
+                    <h2>${pokemonName}</h2>
+                </span>
             </div>
-        <a>
+        </div>
         `
         content.insertAdjacentHTML("beforeend", pokemonHTML);
     };
@@ -55,15 +53,20 @@ function renderPokemon(pokemonsSearch) {
     var pokemonHTML=`
     <div id="pokemonCard">
         <img id = cardIMG src = ${pokemonimg}>
-        <h2 id="cardTitle">${pokemonID}.${pokemonName}</h2>
+        <div class= "container">
+            <span>
+                <h3 id="pokemonIndex">#${pokemonID}.</h3>
+                <h2>${pokemonName}</h2>
+            </span>
+        </div>
     </div>
     `
     content.insertAdjacentHTML("beforeend", pokemonHTML);
     ;
 };
-// function setUpEvents2() {
-//     var btnSearch = document.getElementById("content");
-//     btnSearch.addEventListener("click", function(e){
+function setUpEvents2() {
+    var search = document.getElementById("pokemonCard");
+    search.addEventListener("click", function(e){
     // var searchBar = document.getElementById("search_bar");
     // var searchString = searchBar.value;
     // var key = marvelKey(privateKey, publicKey);
@@ -72,10 +75,11 @@ function renderPokemon(pokemonsSearch) {
     //     var characters = responseData.data.results;
     //     renderCharacters(characters)
     // })
-//     console.log('clicked')
-// });      
-// }
+    // console.log('clicked')
+    console.log("Congrats")
+});      
+}
 fetchPokemons() ;
 setUpEvents() ; 
-// setUpEvents2();
+setUpEvents2();
 
