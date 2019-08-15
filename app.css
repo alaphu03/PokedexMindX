@@ -10,16 +10,15 @@
   border: 1px solid black;
 }
 .container{
+  white-space: nowrap;
   height: 100px;
   width: 200px;
 }
 #pokemonIndex{
   color: black;
-  margin-top: 10px;
 }
 #pokemonName {
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 #heading{
   text-align: center;
@@ -63,8 +62,7 @@ a:hover {
 	text-align: center;
 }  */
 #root{
-  margin-right: 50px;
-  margin-left: 50px;
+  text-align: center;
 }
 
 #pokemonCard{
@@ -86,5 +84,20 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-
-
+.content {
+  max-width: max-content;
+  margin: auto;
+  padding: 10px;
+}
+select{
+  border:1px solid #777;
+  padding: .8rem 3rem .8rem .5rem;
+  border-radius: 3px;
+  color:#565656;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.imgBgMethod{
+  text-align: center;
+}

@@ -12,10 +12,8 @@ function renderPokemons(pokemons) {
         <div id="pokemonCard">
             <img id = pokemonIMG src = ${pokemonimg}>
             <div class= "container">
-                <span>
-                    <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
-                    <h2>${pokemonName}</h2>
-                </span>
+                <h3 id="pokemonIndex">#${pokemonIndex}.</h3>
+                <h2 id="pokemonName">${pokemonName}</h2>
             </div>
         </div>
         `
@@ -39,6 +37,7 @@ function setUpEvents() {
     sendGetRequest(url, function(pokemonsSearch){
         var pokemonsSearch= pokemonsSearch;
         renderPokemon(pokemonsSearch);
+        setUpEvents2();
     })
 });      
 }
@@ -65,8 +64,9 @@ function renderPokemon(pokemonsSearch) {
     ;
 };
 function setUpEvents2() {
-    var search = document.getElementsByClassName("container")
-    search.addEventListener("click", function(e){
+    var search = document.getElementById('content')
+    var search2 = search.parentNode;
+    search2.addEventListener("click", function(e){
     // var searchBar = document.getElementById("search_bar");
     // var searchString = searchBar.value;
     // var key = marvelKey(privateKey, publicKey);
@@ -76,7 +76,8 @@ function setUpEvents2() {
     //     renderCharacters(characters)
     // })
     // console.log('clicked')
-    console.log("Congrats")
+    var myWindow = window.open("#","_self");
+    myWindow.document.writeln("<div>congrats</div>")
 });      
 }
 fetchPokemons() ;
