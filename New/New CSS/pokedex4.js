@@ -1,4 +1,4 @@
-var url = "https://pokeapi.co/api/v2/pokedex/1?offset=20&limit=20";
+var url = "https://pokeapi.co/api/v2/pokedex/6";
 function renderPokemons(Pokemons) {
     var content = document.getElementById("content")
     content.textContent=""
