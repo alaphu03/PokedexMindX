@@ -8,7 +8,7 @@ function renderPokemons(Pokemons) {
         var pokemon_name = Pokemon.pokemon_species.name;
         var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemon_name+'.png';
         var pokemonHTML=`
-        <div id="PokemonCard" class="PokemonCard">
+        <a href ="pokedexTab.html" id="PokemonCard" class="PokemonCard">
             <div id="img_container">
                 <img id="img" src="${imgSrc}">
             </div>
@@ -18,7 +18,7 @@ function renderPokemons(Pokemons) {
                 <small id="PokemonName">${pokemon_name}</small>
                 <br>
             </span>
-        </div>
+        </a>
         
             `;
             content.insertAdjacentHTML("beforeend", pokemonHTML);
