@@ -8,24 +8,24 @@ function renderPokemons(Pokemons) {
         var pokemon_name = Pokemon.pokemon_species.name;
         var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemon_name+'.png';
         var pokemonHTML=`
-        <div id="PokemonCard">
+        <div id="PokemonCard" >
             <div id="img_container">
                 <img id="img" src="${imgSrc}">
             </div>
             <span id="Pokemon_container">
                 <small id="PokemonID">#${pokemonID}</small>
                 <br>
-                <small id="PokemonName">${pokemon_name}</small>
+                <small id="PokemonName" class="PokemonName">${pokemon_name}</small>
                 <br>
             </span>
         </div>
             `;
             content.insertAdjacentHTML("beforeend", pokemonHTML);
+            var btn = document.getElementById("PokemonCard")
+            btn.addEventListener("click", function(gg){
+                console.log('1')
+            })
         }
-        // var btn = document.getElementsByClassName("PokemonCard")
-        // btn.addEventListener("click", function(gg){
-        // console.log('congrats')
-        // })
     }
 
 function fetchPokemons(){

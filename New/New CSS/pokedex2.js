@@ -27,7 +27,12 @@ function renderPokemons(Pokemons) {
         // console.log('congrats')
         // })
     }
-
+document.querySelectorAll('PokemonCard').forEach(item => {
+  item.addEventListener('click', event => {
+    //handle click
+    console.log("haha")
+  })
+})
 function fetchPokemons(){
     var fullURL = `${url}`;
     sendGetRequest(fullURL, function(Pokemonss) {
