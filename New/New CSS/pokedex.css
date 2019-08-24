@@ -43,15 +43,14 @@ nav input {
     width: 300px;
 }
 
-nav button {
-  
+nav button {  
     right: 36%;
     top: 14px;
     position: absolute;
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
+    background: aqua;
     color: black;
     font-size: 17px;
     border: none;
@@ -176,6 +175,7 @@ nav a:hover::before {
   height: 120px;
   width: 120px;
   justify-content: center;
+  z-index:-1;
 }
 
 
