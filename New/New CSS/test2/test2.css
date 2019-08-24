@@ -44,10 +44,7 @@
     border-radius: 5px;
     display: inline;
 }
-#Stat{
-    float: right;
-    width: 850px;
-}
+
 #myProgress {
     margin: 10px;
     border-style: solid;

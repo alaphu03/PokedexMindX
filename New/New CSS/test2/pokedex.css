@@ -7,12 +7,12 @@
 }
 
 .NavBar {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 header {
-    background-color: whitesmoke;
+    background-color: white;
     position: fixed ;
     width: 100%;
     top: 0%;
@@ -25,7 +25,7 @@ header::after {
 }
 
 .logo {
-    background-color: whitesmoke;
+    background-color: white ;
     float: left;
     height: 50px;
     width: 50px;
@@ -43,15 +43,14 @@ nav input {
     width: 300px;
 }
 
-nav button {
-  
+nav button {  
     right: 36%;
     top: 14px;
     position: absolute;
     padding: 6px 10px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
+    background: aqua;
     color: black;
     font-size: 17px;
     border: none;
@@ -150,16 +149,14 @@ nav a:hover::before {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-#content {
-    max-width: 1220px;
-    max-height: 1000px;
+.content {
+    width: 100%;
+    height: 500px;
     margin: auto;
     background:white;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 15px;
   }
-#PokemonCard{
+/* #PokemonCard{
   height: 180px;
   width: 137px;
   margin: 15px;
@@ -170,7 +167,7 @@ nav a:hover::before {
   position: relative;
   text-align: center;
   text-decoration: none;
-}
+} */
 /* #img_container{
   display: block;
   align-items: center;
@@ -178,8 +175,8 @@ nav a:hover::before {
 #img{
   height: 120px;
   width: 120px;
-  z-index: -1;
   justify-content: center;
+  z-index:-1;
 }
 
 
@@ -188,7 +185,7 @@ nav a:hover::before {
   display: inline;
   text-align: center;
   color: hsl(214, 66%, 45%);
-  font-weight: 700
+  font-weight: 700;
 }
 #PokemonID{
   height: 17px;
@@ -203,23 +200,152 @@ nav a:hover::before {
   justify-content: center;
 }
 #Card{
-    width: 500px;
-    margin: 15px;
-    border: 2px solid black;
-    border-radius: 5px;
-    float: left;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 1px;
+  padding: 15px;
+  margin-left: 250px;
+  float: left;
 }
 #Stat{
-    width: 500px;
-    margin: 15px;
-    border: 2px solid black;
-    border-radius: 5px;
-    float: right;
+  width: 700px;
+  margin-top: 90px;
+  float: right;
+  border-radius: 2px;
 }
-#Description{
-    border: 2px solid black;
-    border-radius: 5px;
-    position: absolute;
-    bottom: 0;
-    
+#pokemonIMG{
+  height: 250px;
+  width: 250px;
+}
+.Description{
+  width: 702px;
+  margin-top: 50px;
+  float: right;
+  border-radius: 2px;
+}
+#ID{
+  font-size: 20px;
+  color: grey;
+  display: inline;
+}
+#IDContainer{
+  text-align: center;
+}
+#name{
+  display: inline;
+  font-size: 20px;
+  color: black;
+}
+#H{
+  color: cadetblue;
+}
+
+#W{
+  color: cadetblue;
+}
+#Height{
+  display: inline;
+}
+#Weight{
+  display: inline;
+}
+#type{
+  padding: 8px 0px;
+  background-color:  rgb(51, 228, 51);
+  color: white;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 5px;
+  display: inline;
+}
+
+#myProgress {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+#myProgress2 {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+#myProgress3 {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+#myProgress4 {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+#myProgress5 {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+#myProgress6 {
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  width: 50%;
+  border-radius: 10px;
+  background-color: honeydew;
+}
+
+#myBar1 {
+  border-radius: 10px;
+  width: 1%;
+  height: 30px;
+  background-color: rgb(45, 157, 201);
+
+}
+#myBar2 {
+  border-radius: 10px;
+  width: 1%;
+  height: 30px;
+  background-color: rgb(45, 157, 201);
+
+}
+#myBar3 {
+  border-radius: 10px;
+  width: 1%;
+  height: 30px;
+  background-color: rgb(45, 157, 201);
+
+}
+#myBar4 {
+  border-radius: 10px;
+  width: 1%;
+  height: 30px;
+  background-color: rgb(45, 157, 201);
+
+}
+#myBar5 {
+  border-radius: 10px;
+  width: 1%;
+  height: 30px;
+  background-color: rgb(45, 157, 201);
+
+}
+#myBar6 {
+  border-radius: 10px;
+  width: 1%;
+  height: 30px;
+  background-color: rgb(45, 157, 201);
 }
