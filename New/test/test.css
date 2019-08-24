@@ -12,7 +12,7 @@
 }
 
 header {
-    background-color: white;
+    background-color: whitesmoke;
     position: fixed ;
     width: 100%;
     top: 0%;
@@ -25,7 +25,7 @@ header::after {
 }
 
 .logo {
-    background-color: white ;
+    background-color: whitesmoke;
     float: left;
     height: 50px;
     width: 50px;
@@ -152,9 +152,12 @@ nav a:hover::before {
   }
 #content {
     max-width: 1220px;
+    max-height: 1000px;
     margin: auto;
     background:white;
-    z-index:-1;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
   }
 #PokemonCard{
   height: 180px;
@@ -175,6 +178,7 @@ nav a:hover::before {
 #img{
   height: 120px;
   width: 120px;
+  z-index: -1;
   justify-content: center;
 }
 
@@ -184,7 +188,7 @@ nav a:hover::before {
   display: inline;
   text-align: center;
   color: hsl(214, 66%, 45%);
-  font-weight: 700;
+  font-weight: 700
 }
 #PokemonID{
   height: 17px;
@@ -197,4 +201,25 @@ nav a:hover::before {
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
+}
+#Card{
+    width: 500px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    float: left;
+}
+#Stat{
+    width: 500px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    float: right;
+}
+#Description{
+    border: 2px solid black;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    
 }
