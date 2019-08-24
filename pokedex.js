@@ -1,4 +1,16 @@
 var url = "https://pokeapi.co/api/v2/pokedex/1/?offset=0&limit=20";
+
+function openDetail() {
+    var character_div = document.getElementsByClassName("PokemonCard")
+    for (i=0;i<character_div.length;i++) {
+        var character = character_div[i]
+        character.addEventListener("click",function (e) {
+            var div_clicked = e.target.parentNode
+            var id = div_clicked.id 
+            window.open(`detail.html?id=${id}`,"_self")         
+        }) 
+    }
+}
 function renderPokemons(Pokemons) {
     var content = document.getElementById("content")
     content.textContent=""
@@ -8,26 +20,22 @@ function renderPokemons(Pokemons) {
         var pokemon_name = Pokemon.pokemon_species.name;
         var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemon_name+'.png';
         var pokemonHTML=`
-        <a href ="pokedexTab.html" id="PokemonCard" class="PokemonCard">
-            <div id="img_container">
-                <img id="img" src="${imgSrc}">
-            </div>
-            <span id="Pokemon_container">
-                <small id="PokemonID">#${pokemonID}</small>
-                <br>
-                <small id="PokemonName">${pokemon_name}</small>
-                <br>
-            </span>
-        </a>
+        <div id="${pokemonID}" class="PokemonCard">
+          
+                    <img id="img" src="${imgSrc}">
+               
+                    <small id="PokemonID">#${pokemonID}</small>
+                    <br>
+                    <small id="PokemonName">${pokemon_name}</small>
+                    <br>
+     
+        </div>
         
             `;
             content.insertAdjacentHTML("beforeend", pokemonHTML);
-        var pokemonBTN = document.getElementById('PokemonCard')
-        pokemonBTN.addEventListener('click', function(ff){
-            console.log('Thank Chị Huyền')
-        })
-        }
 
+        }
+        openDetail()
     }
 
 

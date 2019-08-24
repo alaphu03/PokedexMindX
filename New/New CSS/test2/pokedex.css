@@ -206,10 +206,10 @@ nav a:hover::before {
   padding: 15px;
   margin-left: 250px;
   float: left;
+  height: 100%;
 }
 #Stat{
   width: 700px;
-  margin-top: 90px;
   float: right;
   border-radius: 2px;
 }
@@ -218,8 +218,9 @@ nav a:hover::before {
   width: 250px;
 }
 .Description{
-  width: 702px;
-  margin-top: 50px;
+  width: 50%;
+  margin-top: 20px;
+  margin-right: 50px;
   float: right;
   border-radius: 2px;
 }
@@ -248,6 +249,9 @@ nav a:hover::before {
 }
 #Weight{
   display: inline;
+}
+#T{
+  margin-top: 10px;
 }
 #type{
   padding: 8px 0px;

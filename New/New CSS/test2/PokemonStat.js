@@ -2,12 +2,12 @@
 
 var url = "https://pokeapi.co/api/v2/pokemon/bulbasaur";
 
-function renderPokemons(pokemon) {
-    for ( var i = 0 ; i< pokemon.length; i++){
+function renderPokemonStat(pokemon_stat) {
+    for ( var i = 0 ; i< pokemon_stat.length; i++){
         // console.log("Congrats")
-        var pokemon_stat = pokemon[i]
-        var stat = pokemon_stat.base_stat
-        var name = pokemon_stat.stat.name;
+        var pokemon_STAT = pokemon_stat[i]
+        var stat = pokemon_STAT.base_stat
+        var name = pokemon_STAT.stat.name;
         console.log(name)
         console.log(stat)
         var iii = i+1
@@ -136,9 +136,9 @@ function renderPokemons(pokemon) {
 //     }
 // }
 function fetchPokemons() {
-    sendGetRequest(url, function(pokemons){
-        var pokemon= pokemons.stats;
-        renderPokemons(pokemon);
+    sendGetRequest(url, function(pokemonStat){
+        var pokemon_stat= pokemonStat.stats;
+        renderPokemonStat(pokemon_stat);
     });
 };
 fetchPokemons() ; 
