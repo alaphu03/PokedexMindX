@@ -1,6 +1,6 @@
 
 
-var url = "https://pokeapi.co/api/v2/pokemon/bulbasaur";
+var url = "https://pokeapi.co/api/v2/pokemon/"+IDPokemon;
 
 function renderPokemonStat(pokemon_stat) {
     for ( var i = 0 ; i< pokemon_stat.length; i++){
@@ -32,7 +32,7 @@ function renderPokemonStat(pokemon_stat) {
         // frame();
     };
 
-    // var pokemonID = pokemonsSearch.id
+    // var IDPokemon = pokemonsSearch.id
     // var content = document.getElementById("content");
     // content.textContent = ""
     // // var pokemonimg = "https://img.pokemondb.net/artwork/"+pokemonsSearch.name+".jpg";
@@ -135,10 +135,10 @@ function renderPokemonStat(pokemon_stat) {
 //       }
 //     }
 // }
-function fetchPokemons() {
+function fetchPokemonsStat() {
     sendGetRequest(url, function(pokemonStat){
         var pokemon_stat= pokemonStat.stats;
         renderPokemonStat(pokemon_stat);
     });
 };
-fetchPokemons() ; 
+fetchPokemonsStat() ; 

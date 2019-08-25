@@ -4,15 +4,15 @@ console.log(id);
 var url = "https://pokeapi.co/api/v2/pokedex/1/?offset=0&limit=20/${id}";
 
 function renderPokemons(Pokemons){
-    console.log(Pokemons);
+//     console.log(Pokemons);
     
     var content = document.getElementById("dt_content")
     content.textContent = ""
     var pokemonID = Pokemons.entry_number;
     var pokemon_name = Pokemons.pokemon_species.name;
-    console.log(Pokemons.pokemon_species.url);
+//     console.log(Pokemons.pokemon_species.url);
     
-    console.log(pokemon_name);
+//     console.log(pokemon_name);
     
     var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemon_name+'.png';
     var pokemonHTML=`

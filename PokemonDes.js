@@ -11,7 +11,7 @@ function checkS(ar, astr){
         return a
     }
 }
-var url = "https://pokeapi.co/api/v2/pokemon-species/1/";
+var url = "https://pokeapi.co/api/v2/pokemon-species/"+IDPokemon+"/";
 function renderPokemonsDes(Pokemon_des) {
     var content = document.getElementsByClassName("content")[0]
     var pokDes = Pokemon_des.flavor_text_entries
@@ -40,17 +40,17 @@ function renderPokemonsDes(Pokemon_des) {
     }
     for (var z=0; z<arr.length; z++){
         DesString += arr[z]
-        // pokemonDesHTML += `<div id='pokemonLD'>${arr[z]}</div>`
+        // pokemonDesHTML += `<div IDPokemon='pokemonLD'>${arr[z]}</div>`
     }
-    console.log(arr)
-    pokemonDesHTML =`<div class="Description">${DesString}</div`
-    console.log(pokemonDesHTML)
+    // console.log(arr)
+    pokemonDesHTML =`<h1>Description</h1><br><div class="Description">${DesString}</div>`
+    // console.log(pokemonDesHTML)
     content.insertAdjacentHTML("afterbegin", pokemonDesHTML);
 }
 
 
   
-function fetchPokemons(){
+function fetchPokemonsDes(){
     var fullURL = `${url}`;
     sendGetRequest(fullURL, function(PokemonsDes) {
         var Pokemon_des = PokemonsDes
@@ -59,9 +59,9 @@ function fetchPokemons(){
 }
 
 // function setUpEvents() {
-//     var btnSearch = document.getElementById("btn_search");
+//     var btnSearch = document.getElementByIDPokemon("btn_search");
 //     btnSearch.addEventListener("click", function(e){
-//     var searchBar = document.getElementById("search_bar");
+//     var searchBar = document.getElementByIDPokemon("search_bar");
 //     var searchString = searchBar.value;
 //     var key = marvelKey(privateKey, publicKey);
 //     var fullURL=`${url}?${key}&nameStartsWith=${searchString}`;
@@ -72,6 +72,6 @@ function fetchPokemons(){
 // });      
 // }
 
-fetchPokemons();
+fetchPokemonsDes();
 // setUpEvents();
 

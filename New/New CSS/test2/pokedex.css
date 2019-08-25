@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,600");
 *{
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 800;
-
+  font-size: 15px;
   color:black;
 }
 
@@ -180,12 +180,8 @@ nav a:hover::before {
 }
 
 
-#PokemonName{
+#name{
   text-transform: capitalize;
-  display: inline;
-  text-align: center;
-  color: hsl(214, 66%, 45%);
-  font-weight: 700;
 }
 #PokemonID{
   height: 17px;
@@ -201,25 +197,32 @@ nav a:hover::before {
 }
 #Card{
   width: 300px;
-  border: 1px solid black;
   border-radius: 1px;
   padding: 15px;
   margin-left: 250px;
   float: left;
   height: 100%;
 }
+#pokemonStat{
+  margin-left: 125px;
+}
 #Stat{
-  width: 700px;
+  height: 266px;
+  width: 50%;
   float: right;
+  margin-right: 50px;
   border-radius: 2px;
 }
 #pokemonIMG{
   height: 250px;
   width: 250px;
 }
+#DesTiltle{
+  text-align: center;
+}
 .Description{
   width: 50%;
-  margin-top: 20px;
+  height: 266px;
   margin-right: 50px;
   float: right;
   border-radius: 2px;
@@ -251,7 +254,14 @@ nav a:hover::before {
   display: inline;
 }
 #T{
-  margin-top: 10px;
+  color:cadetblue;
+  display: inline;
+  text-transform: capitalize;
+}
+#A{
+  color:cadetblue;
+  display: inline;
+  text-transform: capitalize;
 }
 #type{
   padding: 8px 0px;

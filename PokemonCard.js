@@ -1,19 +1,14 @@
-var url = "https://pokeapi.co/api/v2/pokemon/1/";
+var url = "https://pokeapi.co/api/v2/pokemon/"+IDPokemon+"/";
+console.log(IDPokemon)
 function renderPokemons(Pokemon) {
     var content = document.getElementsByClassName("content")[0]
     var pokemonID = Pokemon.id;
-    console.log(Pokemon)
+    // console.log(Pokemon)
     var pokemon_name = Pokemon.forms[0].name;
     var pokemon_height = (((Pokemon.height *0.328084)+0.001)*100/100).toFixed(1); 
     var pokemon_weight = (((Pokemon.weight *0.220462)+0.001)*100/100).toFixed(2);
     var pokemontype = Pokemon.types;
     var pokemonabi = Pokemon.abilities;
-    for (var type= 0; type< pokemontype.length; type++){
-        console.log(pokemontype[type].type.name)
-    }
-    for (var abi= 0; abi< pokemonabi.length; abi++){
-        console.log(pokemonabi[abi].ability.name)
-    }
     // var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+${pokemon_name}+'.png';
     var pokemonHTML=`
     <div id='Card'>
@@ -32,16 +27,28 @@ function renderPokemons(Pokemon) {
             <div id="WW">${pokemon_weight} lbs</div>
         </div>
         <div id="T">Type:
-            <div>${pokemonHTML}</div>
-            <div>${pokemonHTML}</div>
         </div>
         <div id="A">Ability:
-            <div></div> 
-            <div></div>
         </div>
     </div>
     `;
     content.insertAdjacentHTML("afterbegin", pokemonHTML);
+    for (var type= 0; type< pokemontype.length; type++){
+        var content2 =document.getElementById("T")
+        var pokemonTYPE =pokemontype[type].type.name
+        var typeHTML=`
+        <div id="Type">${pokemonTYPE}</div>
+        `
+        content2.insertAdjacentHTML("beforeend", typeHTML)
+    }
+    for (var abi= 0; abi< pokemonabi.length; abi++){
+        var content3 =document.getElementById("A")
+        var pokemonABI =pokemonabi[abi].ability.name
+        var abiHTML=`
+        <div id="ABI">${pokemonABI}</div>
+        `
+        content3.insertAdjacentHTML("beforeend", abiHTML)
+    }
 }
 
 
