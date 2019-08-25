@@ -1,5 +1,4 @@
 var url = "https://pokeapi.co/api/v2/pokemon/1/";
-console.log(IDPokemon)
 function renderPokemons(Pokemon) {
     var content = document.getElementsByClassName("content")[0]
     var pokemonID = Pokemon.id;
