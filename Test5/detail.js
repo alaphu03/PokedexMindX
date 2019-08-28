@@ -1,13 +1,15 @@
 var id= window.location.search.substring(4)
 
 var url = "https://pokeapi.co/api/v2/pokemon/";
-function renderPokemons(PokemonCard){
+var url2 = "https://pokeapi.co/api/v2/pokemon-species/";
+var url3 = "https://pokeapi.co/api/v2/pokemon/";
+function renderPokemonsInfor(PokemonCard){
     
-    var content = document.getElementById("content")
-    content.textContent = ""
+    var content = document.getElementsByClassName("content")[0]
     var pokemonID = PokemonCard.id;
     // console.log(Pokemon)
     var pokemon_name = PokemonCard.forms[0].name;
+    console.log(PokemonCard);
     var pokemon_height = (((PokemonCard.height *0.328084)+0.001)*100/100).toFixed(1); 
     var pokemon_weight = (((PokemonCard.weight *0.220462)+0.001)*100/100).toFixed(2);
     var pokemontype = PokemonCard.types;
@@ -67,17 +69,94 @@ function renderPokemons(PokemonCard){
 //         content.insertAdjacentHTML("beforeend", pokemonHTML);
     }
 }
+function checkS(ar, astr){
+    if(ar.length==0){
+        return true
+    }else{
+        var a = true
+        for(var i = 0; i < ar.length; i++){
+            if(astr.substring(0,10).toLowerCase()==ar[i].substring(0,10).toLowerCase()){
+                a = false
+            }
+        }
+        return a
+    }
+}
+function renderPokemonsDes(Pokemon_des) {
+    var content = document.getElementsByClassName("content")[0]
+    var pokDes = Pokemon_des.flavor_text_entries
+    var pokemonDesList = [];
+    var DesString = '';
+    var pokemonDesHTML=`
+    <div class="Description">
+    </div>
+    `
+    for(var x=0; x<pokDes.length; x++){
+        var pokDesToUse = pokDes[x].language.name
+        if (pokDesToUse =='en'){
+            // console.log('1')
+            var pokemonDesToUse = pokDes[x].flavor_text
+            pokemonDesList.push(pokemonDesToUse)
+        }
+    }
+
+    // var pokDesToUse = Pokemon_des.flavor_text_entries[ii].flavor_text
+    // console.log(pokemonDesList)
+    var arr = []
+    for (var y = 0; y<pokemonDesList.length; y++){
+        if(!arr.includes(pokemonDesList[y])&&checkS(arr,pokemonDesList[y])){
+            arr.push(pokemonDesList[y])
+        } 
+    }
+    for (var z=0; z<arr.length; z++){
+        DesString += arr[z]
+        // pokemonDesHTML += `<div IDPokemon='pokemonLD'>${arr[z]}</div>`
+    }
+    // console.log(arr)
+    pokemonDesHTML =`<h1>Description</h1><br><div class="Description">${DesString}</div>`
+    // console.log(pokemonDesHTML)
+    content.insertAdjacentHTML("afterbegin", pokemonDesHTML);
+}
+
+
+function renderPokemonStat(pokemon_stat) {
+    // console.log("Congrats")
+    var stat = pokemon_STAT.base_stat
+    var myBarr = "myBar" +pokemon_stat_count3
+    var barstat = document.getElementById(myBarr); 
+    console.log(myBarr)
+    var width = 10;
+    var stats = stat /1.5
+    for ( var y = 0; y <stats; y++){
+        width++; 
+        barstat.style.width = width + '%'; 
+    }
+}
 function fetchCharacter () {
 
     var pokemonURL = `${url}${id}`
     sendGetRequest(pokemonURL, function (responseData) {
 
             var PokemonCard = responseData;
-            
-            renderPokemons(PokemonCard)
-        
-
+            var pokemon_stat= responseData.stats;
+            renderPokemonsInfor(PokemonCard)
+            renderPokemonStat(pokemon_stat);
     })
 }
-
-fetchCharacter()
+function fetchPokemonsDes(){
+    var desURL = `${url2}${id}`;
+    sendGetRequest(desURL, function(PokemonsDes) {
+        var Pokemon_des = PokemonsDes
+        renderPokemonsDes(Pokemon_des)
+    });
+}
+function fetchPokemonsStat() {
+    var statURL = `${url3}${id}`
+    sendGetRequest(statURL, function(pokemonStat){
+        var pokemon_stat= pokemonStat.stats;
+        renderPokemonStat(pokemon_stat);
+    });
+};
+fetchCharacter();
+fetchPokemonsDes();
+// fetchPokemonsStat();

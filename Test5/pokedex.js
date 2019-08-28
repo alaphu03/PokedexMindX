@@ -18,17 +18,17 @@ function renderPokemons(Pokemons) {
     content.textContent=""
     for (var i = 0; i <Pokemons.length; i++){
         var Pokemon = Pokemons[i];
-        var pokemonID = Pokemon.entry_number;
-        var pokemon_name = Pokemon.pokemon_species.name;
-        var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemon_name+'.png';
+        var pokemon_ID = Pokemon.entry_number;
+        var pokemonname = Pokemon.pokemon_species.name;
+        var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemonname+'.png';
         var pokemonHTML=`
-        <div id="${pokemonID}" class="PokemonCard">
+        <div id="${pokemon_ID}" class="PokemonCard">
           
                     <img id="img" src="${imgSrc}">
                
-                    <small id="PokemonID">#${pokemonID}</small>
+                    <small id="PokemonID">#${pokemon_ID}</small>
                     <br>
-                    <small id="PokemonName">${pokemon_name}</small>
+                    <small id="PokemonName">${pokemonname}</small>
                     <br>
      
         </div>

@@ -54,7 +54,13 @@ function fetchPokemonID(){
         renderPokemonID(IDs)
     });
 }
-
+function fetchPokemonsDes(){
+    var fullURL = `${url}`;
+    sendGetRequest(fullURL, function(PokemonsDes) {
+        var Pokemon_des = PokemonsDes
+        renderPokemonsDes(Pokemon_des)
+    });
+}
 // function setUpEvents() {
 //     var btnSearch = document.getElementById("btn_search");
 //     btnSearch.addEventListener("click", function(e){

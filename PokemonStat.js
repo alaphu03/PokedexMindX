@@ -20,16 +20,6 @@ function renderPokemonStat(pokemon_stat) {
             width++; 
             elem.style.width = width + '%'; 
         }
-        // function frame() {
-        //   if (width >= stat) {
-        //     clearInterval(id);
-        //   } 
-        //   else {
-        //     width++; 
-        //     elem.style.width = width + '%'; 
-        //   }
-        // }
-        // frame();
     };
 
     // var IDPokemon = pokemonsSearch.id
