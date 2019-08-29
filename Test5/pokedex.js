@@ -7,7 +7,7 @@ function openDetail() {
         character.addEventListener("click",function (e) {
             var div_clicked = e.target.parentNode
             var id = div_clicked.id 
-            window.open(`detail.html?id=${id}`,"_self")         
+            window.open(`detail2.html?id=${id}`,"_self")         
         }) 
     }
 }

@@ -11,7 +11,7 @@ function openDetail() {
             HTML =`
             <p>${iid}</p>
             `
-            var newtab = window.open("pokedex.html","_self");
+            var newtab = window.open("detail2.html","_self");
             newtab.insertAdjacentHTML("beforeend", HTML)  
         }) 
     }
