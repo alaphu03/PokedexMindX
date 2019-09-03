@@ -1,24 +1,197 @@
+/* Loading animations start here */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section.wrapper {
+    padding: 40px 0;
+}
+
+div.spinner {
+    -moz-animation: rotate 10s infinite linear;
+    -webkit-animation: rotate 10s infinite linear;
+    animation: rotate 10s infinite linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    margin: -75px 0 0 -75px;
+    width: 142px;
+    height: 142px;
+}
+
+div.spinner i {
+    -moz-animation: rotate 3s infinite cubic-bezier(0.09, 0.6, 0.8, 0.03);
+    -webkit-animation: rotate 3s infinite cubic-bezier(0.09, 0.6, 0.8, 0.03);
+    animation: rotate 3s infinite cubic-bezier(0.09, 0.6, 0.8, 0.03);
+    -moz-transform-origin: 50% 100% 0;
+    -webkit-transform-origin: 50% 100% 0;
+    transform-origin: 50% 100% 0;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    border: solid 6px transparent;
+    border-bottom: none;
+}
+
+div.spinner i:nth-child(1) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 0.3, 0.12, 0.03);
+    width: 44px;
+    height: 22px;
+    margin-top: -22px;
+    margin-left: -22px;
+    border-color: #2172b8;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+}
+
+div.spinner i:nth-child(2) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 0.6, 0.24, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 0.6, 0.24, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 0.6, 0.24, 0.03);
+    width: 58px;
+    height: 29px;
+    margin-top: -29px;
+    margin-left: -29px;
+    border-color: #18a39b;
+    border-top-left-radius: 42px;
+    border-top-right-radius: 42px;
+}
+
+div.spinner i:nth-child(3) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 0.9, 0.36, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 0.9, 0.36, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 0.9, 0.36, 0.03);
+    width: 72px;
+    height: 36px;
+    margin-top: -36px;
+    margin-left: -36px;
+    border-color: #82c545;
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+}
+
+div.spinner i:nth-child(4) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 1.2, 0.48, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 1.2, 0.48, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 1.2, 0.48, 0.03);
+    width: 86px;
+    height: 43px;
+    margin-top: -43px;
+    margin-left: -43px;
+    border-color: #f8b739;
+    border-top-left-radius: 54px;
+    border-top-right-radius: 54px;
+}
+
+div.spinner i:nth-child(5) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 1.5, 0.6, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 1.5, 0.6, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 1.5, 0.6, 0.03);
+    width: 100px;
+    height: 50px;
+    margin-top: -50px;
+    margin-left: -50px;
+    border-color: #f06045;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+div.spinner i:nth-child(6) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 1.8, 0.72, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 1.8, 0.72, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 1.8, 0.72, 0.03);
+    width: 114px;
+    height: 57px;
+    margin-top: -57px;
+    margin-left: -57px;
+    border-color: #ed2861;
+    border-top-left-radius: 66px;
+    border-top-right-radius: 66px;
+}
+
+div.spinner i:nth-child(7) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 2.1, 0.84, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 2.1, 0.84, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 2.1, 0.84, 0.03);
+    width: 128px;
+    height: 64px;
+    margin-top: -64px;
+    margin-left: -64px;
+    border-color: #c12680;
+    border-top-left-radius: 72px;
+    border-top-right-radius: 72px;
+}
+
+div.spinner i:nth-child(8) {
+    -moz-animation-timing-function: cubic-bezier(0.09, 2.4, 0.96, 0.03);
+    -webkit-animation-timing-function: cubic-bezier(0.09, 2.4, 0.96, 0.03);
+    animation-timing-function: cubic-bezier(0.09, 2.4, 0.96, 0.03);
+    width: 142px;
+    height: 71px;
+    margin-top: -71px;
+    margin-left: -71px;
+    border-color: #5d3191;
+    border-top-left-radius: 78px;
+    border-top-right-radius: 78px;
+}
+
+@-moz-keyframes rotate {
+    to {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    to {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Loading animations end here */
+
 * {
     font-weight: 800;
     font-size: 15px;
     color: black;
 }
 
-.search-box{
+.search-box {
     /* position: absolute; */
     height: 40px;
     border-radius: 40px;
     padding: 10px;
     background: linear-gradient(to bottom, #33ccff 0%, #ffffff 100%);
 }
-.search-box:hover > .search-txt{
+
+.search-box:hover>.search-txt {
     width: 240px;
     padding: 0 6px;
 }
-.search-box:hover > .search-btn{
+
+.search-box:hover>.search-btn {
     background: white
 }
-.search-btn{
+
+.search-btn {
     float: right;
     width: 40px;
     height: 40px;
@@ -29,19 +202,21 @@
     transition: 0.4s;
     background: white;
 }
-.search-txt{
-    border:none;
+
+.search-txt {
+    border: none;
     background: none;
     outline: none;
-    float:right;
+    float: right;
     text-align: center;
     padding: 0;
     color: white;
     font-size: 16px;
     transition: 0.4s;
-    line-height:40px;
+    line-height: 40px;
     width: 0px;
 }
+
 a {
     justify-content: center;
     align-content: center;
@@ -127,15 +302,14 @@ footer {
     text-align: center;
 }
 
-
-
 #img {
     height: 120px;
     width: 120px;
     justify-content: center;
     z-index: -1;
 }
-.PokemonCard{
+
+.PokemonCard {
     height: 180px;
     width: 134px;
     text-align: center;
@@ -143,6 +317,7 @@ footer {
     border-radius: 5px;
     margin: 15px;
 }
+
 #PokemonName {
     text-transform: capitalize;
     height: 19px;
@@ -169,57 +344,68 @@ footer {
     align-items: center;
     justify-content: center;
 }
-#Card{
+
+#Card {
     width: 45%;
     display: inline;
     float: left;
     line-height: 25px;
 }
-.StatContainer{
+
+.StatContainer {
     text-align: center;
 }
-.statBar1{
+
+.statBar1 {
     background: linear-gradient(to right, #66ff33 -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.statBar2{
+
+.statBar2 {
     background: linear-gradient(to right, #ffcc66 -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
 }
-.statBar3{
+
+.statBar3 {
     background: linear-gradient(to right, #ff9933 -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
 }
-.statBar4{
+
+.statBar4 {
     background: linear-gradient(to right, #99ccff -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
 }
-.statBar5{
+
+.statBar5 {
     background: linear-gradient(to right, #cc99ff -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
 }
-.statBar6{
+
+.statBar6 {
     background: linear-gradient(to right, #ff99ff -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-#IDContainer{
+
+#IDContainer {
     margin-left: 50px;
     text-transform: capitalize;
 }
-#typeIMG{
+
+#typeIMG {
     height: 30px;
     width: 128.5px;
 }
+
 
 /* #Stat {
     height: 266px;
@@ -233,18 +419,22 @@ footer {
     height: 250px;
     width: 250px;
 }
-.ortherContent{
+
+.ortherContent {
     margin-left: 100px;
     line-height: 30px !important;
 }
-.pokeballIcon{
+
+.pokeballIcon {
     height: 15px;
     width: 15px;
 }
-.imgIDContent{
+
+.imgIDContent {
     align-items: center;
     text-align: center;
 }
+
 .DEs {
     text-align: center;
     border: 2px solid black;
@@ -309,31 +499,38 @@ footer {
     border-radius: 5px;
     display: inline;
 }
-#Type{
+
+#Type {
     color: black;
 }
-#ABI{
+
+#ABI {
     color: black;
 }
-.content{
+
+.content {
     margin-top: 25px;
     margin-left: 25px;
 }
-.statBar{
+
+.statBar {
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.StatContainer{
+
+.StatContainer {
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
     background: rgba(241, 56, 56, 0.966);
 }
-.StatContent{
+
+.StatContent {
     width: 100%;
     border: 1px solid rgb(156, 140, 140);
     border-radius: 5px;
 }
+
 html {
     background-color: white;
     line-height: 1.7;
@@ -356,7 +553,7 @@ a {
 header {
     padding-top: 20px;
     /* color: white; */
-    background-image: url(https://learnwebcode.github.io/Web-Design-for-Beginners/flower.jpg);
+    background-image: url("21000.jpg");
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -370,6 +567,8 @@ header h1 {
 header p {
     margin: 0;
 }
+
+
 /* Site Navigation */
 
 .site-nav {
@@ -567,7 +766,7 @@ footer {
     padding-top: 20px;
 }
 
-. center {
+.center {
     text-align: center;
     border: 3px solid brown;
     line-height: 50px;
@@ -575,7 +774,7 @@ footer {
 
 .b_below {}
 
-.poison{
+.poison {
     width: 66px;
     height: 26px;
     background-color: hsl(312, 33%, 50%);
@@ -593,7 +792,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.psychic{
+
+.psychic {
     width: 66px;
     height: 26px;
     background-color: hsl(336, 100%, 67%);
@@ -611,7 +811,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.grass{
+
+.grass {
     width: 66px;
     height: 26px;
     background-color: hsl(103, 54%, 57%);
@@ -629,7 +830,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.normal{
+
+.normal {
     width: 66px;
     height: 26px;
     background-color: hsl(60, 9%, 63%);
@@ -647,7 +849,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.steel{
+
+.steel {
     width: 66px;
     height: 26px;
     background-color: hsl(240, 11%, 70%);
@@ -665,7 +868,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.water{
+
+.water {
     width: 66px;
     height: 26px;
     background-color: hsl(210, 100%, 60%);
@@ -683,7 +887,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.dark{
+
+.dark {
     width: 66px;
     height: 26px;
     background-color: hsl(20, 27%, 37%);
@@ -701,7 +906,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.bug{
+
+.bug {
     width: 66px;
     height: 26px;
     background-color: hsl(67, 69%, 43%);
@@ -719,7 +925,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.rock{
+
+.rock {
     width: 66px;
     height: 26px;
     background-color: hsl(48, 38%, 57%);
@@ -737,7 +944,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.ground{
+
+.ground {
     width: 66px;
     height: 26px;
     background-color: hsl(45, 67%, 60%);
@@ -755,7 +963,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.flying{
+
+.flying {
     width: 66px;
     height: 26px;
     background-color: hsl(231, 100%, 77%);
@@ -773,7 +982,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.electric{
+
+.electric {
     width: 66px;
     height: 26px;
     background-color: hsl(45, 100%, 60%);
@@ -791,7 +1001,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.fire{
+
+.fire {
     width: 66px;
     height: 26px;
     background-color: hsl(9, 100%, 57%);
@@ -809,7 +1020,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.fighting{
+
+.fighting {
     width: 66px;
     height: 26px;
     background-color: hsl(9, 47%, 50%);
@@ -827,7 +1039,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.dragon{
+
+.dragon {
     width: 66px;
     height: 26px;
     background-color: hsl(248, 80%, 68%);
@@ -845,7 +1058,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.ice{
+
+.ice {
     width: 66px;
     height: 26px;
     background-color: hsl(200, 100%, 70%);
@@ -863,7 +1077,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.ghost{
+
+.ghost {
     width: 66px;
     height: 26px;
     background-color: hsl(240, 38%, 57%);
@@ -881,14 +1096,17 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
+
 .pokemonIcon {
     height: 30px;
     width: 40px;
 }
-.Home{
+
+.Home {
     padding: 12px;
 }
-.Datafooter{
+
+.Datafooter {
     background: white;
     text-align: center;
     justify-content: center;

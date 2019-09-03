@@ -1,26 +1,40 @@
+var counter;
+
+function waiting() {
+    counter = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "initial";
+    document.getElementById("myDiv1").style.display = "initial";
+    document.getElementById("myDiv2").style.display = "initial";
+    document.getElementById("myDiv3").style.display = "initial";
+}
+
 var url = "https://pokeapi.co/api/v2/pokedex/1/";
 
 function openDetail() {
     var character_div = document.getElementsByClassName("PokemonCard")
-    for (i=0;i<character_div.length;i++) {
+    for (i = 0; i < character_div.length; i++) {
         var character = character_div[i]
-        character.addEventListener("click",function (e) {
+        character.addEventListener("click", function(e) {
             var div_clicked = e.target.parentNode
-            var id = div_clicked.id 
-            window.open(`Pokemon.html?id=${id}`,"_self")         
-        }) 
+            var id = div_clicked.id
+            window.open(`Pokemon.html?id=${id}`, "_self")
+        })
     }
 }
 
 
 function renderPokemons(Pokemons) {
     var content = document.getElementsByClassName("main-area")[0]
-    for (var i = 0; i <Pokemons.length; i++){
+    for (var i = 0; i < Pokemons.length; i++) {
         var Pokemon = Pokemons[i];
         var pokemon_ID = Pokemon.entry_number;
         var pokemonname = Pokemon.pokemon_species.name;
-        var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemonname+'.png';
-        var pokemonHTML=`
+        var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/' + pokemonname + '.png';
+        var pokemonHTML = `
         <div id="${pokemon_ID}" class="PokemonCard">
           
                     <img id="img" src="${imgSrc}">
@@ -34,18 +48,19 @@ function renderPokemons(Pokemons) {
         </div>
         
             `;
-            content.insertAdjacentHTML("beforeend", pokemonHTML);
+        content.insertAdjacentHTML("beforeend", pokemonHTML);
 
-        }
-        openDetail()
     }
+    openDetail()
+}
+
 function renderPokemonSearch(SearchPokemon) {
     var content = document.getElementsByClassName("main-area")[0]
-    content.textContent='';
+    content.textContent = '';
     var pokemon_ID = SearchPokemon.id;
     var pokemonname = SearchPokemon.forms[0].name;
-    var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/'+pokemonname+'.png';
-    var pokemonHTML=`
+    var imgSrc = 'https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/' + pokemonname + '.png';
+    var pokemonHTML = `
     <div id="${pokemon_ID}" class="PokemonCard">
       
                 <img id="img" src="${imgSrc}">
@@ -59,11 +74,11 @@ function renderPokemonSearch(SearchPokemon) {
     </div>
     
         `;
-        content.insertAdjacentHTML("beforeend", pokemonHTML);
+    content.insertAdjacentHTML("beforeend", pokemonHTML);
     openDetail()
-    }
-  
-function fetchPokemons(){
+}
+
+function fetchPokemons() {
     var pokedexfullURL = `${url}`;
     sendGetRequest(pokedexfullURL, function(Pokemonss) {
         var Pokemons = Pokemonss.pokemon_entries;
@@ -72,15 +87,15 @@ function fetchPokemons(){
     });
 }
 
-btnSearch= document.getElementById('btn_search');
-btnSearch.addEventListener('click', function(e){
+btnSearch = document.getElementById('btn_search');
+btnSearch.addEventListener('click', function(e) {
     var searchBar = document.getElementById('search_bar');
     var searchStringg = searchBar.value;
     var searchString = searchStringg.toLowerCase();
-    if (searchString != ""){
-        var url =`https://pokeapi.co/api/v2/pokemon/${searchString}`;
+    if (searchString != "") {
+        var url = `https://pokeapi.co/api/v2/pokemon/${searchString}`;
     }
-    sendGetRequest(url, function(respondeData){
+    sendGetRequest(url, function(respondeData) {
         var SearchPokemon = respondeData;
         renderPokemonSearch(SearchPokemon);
     })

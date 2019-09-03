@@ -5,7 +5,6 @@
     color: black;
 }
 
-
 a {
     justify-content: center;
     align-content: center;
@@ -91,15 +90,14 @@ footer {
     text-align: center;
 }
 
-
-
 #img {
     height: 120px;
     width: 120px;
     justify-content: center;
     z-index: -1;
 }
-.PokemonCard{
+
+.PokemonCard {
     height: 180px;
     width: 134px;
     text-align: center;
@@ -107,6 +105,7 @@ footer {
     border-radius: 5px;
     margin: 15px;
 }
+
 #PokemonName {
     text-transform: capitalize;
     height: 19px;
@@ -133,16 +132,19 @@ footer {
     align-items: center;
     justify-content: center;
 }
-#Card{
+
+#Card {
     width: 45%;
     display: inline;
     float: left;
     line-height: 25px;
 }
-.statBar{
+
+.statBar {
     justify-content: center;
 }
-.statBar1{
+
+.statBar1 {
     background: linear-gradient(to right, #66ff33 -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
@@ -151,35 +153,40 @@ footer {
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.statBar2{
+
+.statBar2 {
     background: linear-gradient(to right, #ffcc66 -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.statBar3{
+
+.statBar3 {
     background: linear-gradient(to right, #ff9933 -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.statBar4{
+
+.statBar4 {
     background: linear-gradient(to right, #99ccff -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.statBar5{
+
+.statBar5 {
     background: linear-gradient(to right, #cc99ff -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.statBar6{
+
+.statBar6 {
     background: linear-gradient(to right, #ff99ff -50%, #ffffcc 150%);
     width: 100%;
     height: 41px;
@@ -188,17 +195,21 @@ footer {
     font-family: 'Fjalla One', sans-serif;
     font-size: 15px;
 }
-.Stats{
+
+.Stats {
     float: right;
 }
-#IDContainer{
+
+#IDContainer {
     margin-left: 50px;
     text-transform: capitalize;
 }
-#typeIMG{
+
+#typeIMG {
     height: 30px;
     width: 128.5px;
 }
+
 
 /* #Stat {
     height: 266px;
@@ -212,18 +223,22 @@ footer {
     height: 290px;
     width: 363.98px;
 }
-.ortherContent{
+
+.ortherContent {
     margin-left: 100px;
     line-height: 30px !important;
 }
-.pokeballIcon{
+
+.pokeballIcon {
     height: 15px;
     width: 15px;
 }
-.imgIDContent{
+
+.imgIDContent {
     align-items: center;
     text-align: center;
 }
+
 .DEs {
     text-align: center;
     border: 2px solid black;
@@ -288,36 +303,42 @@ footer {
     border-radius: 5px;
     display: inline;
 }
-#Type{
+
+#Type {
     color: black;
 }
-#ABI{
+
+#ABI {
     color: black;
 }
-.content{
+
+.content {
     margin-top: 25px;
     margin-left: 25px;
 }
 
-.StatContainer{
+.StatContainer {
     text-align: center;
     border: 2px solid black;
     border-radius: 5px;
     background: rgba(241, 56, 56, 0.966);
 }
-.StatContent{
+
+.StatContent {
     width: 100%;
     border: 1px solid rgb(156, 140, 140);
     border-radius: 5px;
 }
+
 html {
     background-color: white;
     line-height: 1.7;
 }
 
-.footer{
+.footer {
     float: right;
 }
+
 img {
     max-width: 100%;
     height: auto;
@@ -330,7 +351,7 @@ a {
 header {
     padding-top: 20px;
     /* color: white; */
-    background-image: url(https://learnwebcode.github.io/Web-Design-for-Beginners/flower.jpg);
+    background-image: url("21000.jpg");
     background-position: right center;
     background-repeat: no-repeat;
 }
@@ -344,6 +365,8 @@ header h1 {
 header p {
     margin: 0;
 }
+
+
 /* Site Navigation */
 
 .site-nav {
@@ -549,7 +572,7 @@ footer {
 
 .b_below {}
 
-.poison{
+.poison {
     width: 66px;
     height: 26px;
     background-color: hsl(312, 33%, 50%);
@@ -567,7 +590,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.psychic{
+
+.psychic {
     width: 66px;
     height: 26px;
     background-color: hsl(336, 100%, 67%);
@@ -585,7 +609,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.grass{
+
+.grass {
     width: 66px;
     height: 26px;
     background-color: hsl(103, 54%, 57%);
@@ -603,7 +628,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.normal{
+
+.normal {
     width: 66px;
     height: 26px;
     background-color: hsl(60, 9%, 63%);
@@ -621,7 +647,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.steel{
+
+.steel {
     width: 66px;
     height: 26px;
     background-color: hsl(240, 11%, 70%);
@@ -639,7 +666,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.water{
+
+.water {
     width: 66px;
     height: 26px;
     background-color: hsl(210, 100%, 60%);
@@ -657,7 +685,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.dark{
+
+.dark {
     width: 66px;
     height: 26px;
     background-color: hsl(20, 27%, 37%);
@@ -675,7 +704,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.bug{
+
+.bug {
     width: 66px;
     height: 26px;
     background-color: hsl(67, 69%, 43%);
@@ -693,7 +723,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.rock{
+
+.rock {
     width: 66px;
     height: 26px;
     background-color: hsl(48, 38%, 57%);
@@ -711,7 +742,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.ground{
+
+.ground {
     width: 66px;
     height: 26px;
     background-color: hsl(45, 67%, 60%);
@@ -729,7 +761,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.flying{
+
+.flying {
     width: 66px;
     height: 26px;
     background-color: hsl(231, 100%, 77%);
@@ -747,7 +780,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.electric{
+
+.electric {
     width: 66px;
     height: 26px;
     background-color: hsl(45, 100%, 60%);
@@ -765,7 +799,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.fire{
+
+.fire {
     width: 66px;
     height: 26px;
     background-color: hsl(9, 100%, 57%);
@@ -783,7 +818,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.fighting{
+
+.fighting {
     width: 66px;
     height: 26px;
     background-color: hsl(9, 47%, 50%);
@@ -801,7 +837,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.dragon{
+
+.dragon {
     width: 66px;
     height: 26px;
     background-color: hsl(248, 80%, 68%);
@@ -819,7 +856,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.ice{
+
+.ice {
     width: 66px;
     height: 26px;
     background-color: hsl(200, 100%, 70%);
@@ -837,7 +875,8 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
-.ghost{
+
+.ghost {
     width: 66px;
     height: 26px;
     background-color: hsl(240, 38%, 57%);
@@ -855,10 +894,12 @@ footer {
     text-transform: uppercase;
     margin-left: 5px;
 }
+
 .pokemonIcon {
     height: 30px;
     width: 40px;
 }
-.Home{
+
+.Home {
     padding: 12px;
 }
